@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function takePhoto () {
+		// alert(1);
+		document.location = "objc://" + takeNow;
+	}
+
+	function takeNow() {
+
+	}
+	
+	function show(arg) {
+	 	document.getElementById("photoData").value = arg;
+	 	return "success";
+	}
+
+    function touchImage(src) {
+//        alert(src);
+        document.location = "touchImage://" + src;  <!-- 将点击的图片的src的传过去 -->
+        return "YES";
+    }
+	
+</script>
+</head>
+<body scroll="no">
+Click this Button <br/>
+<input type="submit" onClick="takePhoto()" value="开始拍照" style="width: 100px; height:40px;"></a><br/>
+<br/>
+<div> Base64编码字符串显示 </div>
+<textarea id="photoData" rows="15" cols="45" style="font-size:6; font-weight:bold; color:red;"></textarea><br/>
+<br/>
+<div style="width:100px;height=100px"><img src="http://www.jingan.gov.cn/newscenter/jobnews/201410/W020141024576266359059.jpg" onClick="touchImage(this.src)"></div>
+
+</body>
+</html>
