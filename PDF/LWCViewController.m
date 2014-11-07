@@ -11,7 +11,7 @@
 
 @interface LWCViewController () <UIScrollViewDelegate,UIGestureRecognizerDelegate,UIWebViewDelegate>
 
-@property (nonatomic, strong) UIWebView *webView;
+//@property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
@@ -32,41 +32,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"pdf"];
-//    NSURL *url = [NSURL fileURLWithPath:filePath];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    [self.webView loadRequest:request];
+//    self.view.backgroundColor = [UIColor grayColor];
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    _scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    _scrollView.directionalLockEnabled = NO;
-    _scrollView.delaysContentTouches = YES;
-    _scrollView.bounces = NO;
-    _scrollView.contentSize = self.view.bounds.size;
-    _scrollView.showsHorizontalScrollIndicator = NO;
-    _scrollView.showsVerticalScrollIndicator = NO;
-    _scrollView.delegate = self;
-    _scrollView.maximumZoomScale = 6.f;
-    _scrollView.decelerationRate = 0.1f;
-    _scrollView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:_scrollView];
-    
-    _webView = [[UIWebView alloc]initWithFrame:_scrollView.bounds];
+//    _webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
     _webView.delegate = self;
-//    _webView.scalesPageToFit = YES;
-    [_scrollView addSubview:_webView];
+    _webView.scalesPageToFit = YES;
+    _webView.backgroundColor = [UIColor grayColor];
+    _webView.scrollView.directionalLockEnabled = NO;
+    
+//    [self.view addSubview:_webView];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"pdf"];
     NSURL *url = [NSURL fileURLWithPath:filePath];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
-    
-    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    doubleTap.numberOfTapsRequired = 2;
-    doubleTap.delegate = self;
-    [self.view addGestureRecognizer:doubleTap];
 
 /*
     CGRect frame = _scrollView.frame;
@@ -86,8 +65,7 @@
     CGFloat Ws = _scrollView.frame.size.width - _scrollView.contentInset.left - _scrollView.contentInset.right;
     CGFloat Hs = _scrollView.frame.size.height - _scrollView.contentInset.top - _scrollView.contentInset.bottom;
     CGFloat W = _webView.frame.size.width;
-    CGFloat H = _webView.frame.size.height;
-    
+    CGFloat H = _webView.frame.size.height;    
     
     CGRect rct = _webView.frame;
     rct.origin.x = MAX((Ws-W)/2, 0);

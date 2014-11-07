@@ -10,5 +10,5 @@
 
 @interface LWCViewController : UIViewController <UIWebViewDelegate>
 
-//@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end

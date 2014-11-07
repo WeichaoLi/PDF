@@ -22,7 +22,6 @@
 		1BE6C6761A0868DD00225D19 /* LWCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6C6741A0868DD00225D19 /* LWCViewController.m */; };
 		1BE6C6771A0868DD00225D19 /* LWCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE6C6751A0868DD00225D19 /* LWCViewController.xib */; };
 		1BE6C67B1A086B2E00225D19 /* demo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1BE6C67A1A086B2E00225D19 /* demo.pdf */; };
-		1BE6C67D1A086B6700225D19 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BE6C67C1A086B6700225D19 /* demo.html */; };
 		1BE6C6801A08723700225D19 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6C67F1A08723700225D19 /* PDFView.m */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		1BE6C6741A0868DD00225D19 /* LWCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCViewController.m; sourceTree = "<group>"; };
 		1BE6C6751A0868DD00225D19 /* LWCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWCViewController.xib; sourceTree = "<group>"; };
 		1BE6C67A1A086B2E00225D19 /* demo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = demo.pdf; sourceTree = "<group>"; };
-		1BE6C67C1A086B6700225D19 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 		1BE6C67E1A08723700225D19 /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
 		1BE6C67F1A08723700225D19 /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +133,6 @@
 		1BE6C64B1A08688F00225D19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1BE6C67C1A086B6700225D19 /* demo.html */,
 				1BE6C67A1A086B2E00225D19 /* demo.pdf */,
 				1BE6C64C1A08688F00225D19 /* PDF-Info.plist */,
 				1BE6C64D1A08688F00225D19 /* InfoPlist.strings */,
@@ -243,7 +240,6 @@
 				1BE6C67B1A086B2E00225D19 /* demo.pdf in Resources */,
 				1BE6C64F1A08688F00225D19 /* InfoPlist.strings in Resources */,
 				1BE6C6571A08688F00225D19 /* Images.xcassets in Resources */,
-				1BE6C67D1A086B6700225D19 /* demo.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +458,7 @@
 				1BE6C66F1A08689000225D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BE6C6701A08689000225D19 /* Build configuration list for PBXNativeTarget "PDFTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +467,7 @@
 				1BE6C6721A08689000225D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
