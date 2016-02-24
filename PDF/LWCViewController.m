@@ -41,8 +41,9 @@
     _webView.scalesPageToFit = YES;
     [self.view addSubview:_webView];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"pdf"];
-    NSURL *url = [NSURL fileURLWithPath:filePath];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"pdf"];
+//    NSURL *url = [NSURL fileURLWithPath:filePath];
+    NSURL *url = [NSURL URLWithString:@"http://192.168.16.118:8888/demo1.pdf"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
     
@@ -51,7 +52,7 @@
     doubleTap.delegate = self;
     [self.view addGestureRecognizer:doubleTap];
 
-    
+//    CATiledLayer
 
 //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"html"];
 //    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
